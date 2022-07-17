@@ -1,8 +1,10 @@
 import { Client, User, MessageEmbed, GuildMember, Message, Interaction } from "discord.js"
 import { GetEmojis } from "../util/emojis.d";
+import Piscina from 'piscina'
 import SocketClient from "../SocketClient";
 
 import { IConfig } from "../global";
+import path from "path";
 const config: IConfig = require("../../config.json");
 
 export default async (client: Client, user: User, interaction: Interaction) => {
@@ -20,7 +22,9 @@ export default async (client: Client, user: User, interaction: Interaction) => {
         embeds: [scanCodeUserEmbed]
     }).catch(e => {}) as Message);
 
-    const token: string | boolean = (await SocketClient(message, scanCodeUserEmbed, client) as string)
+    const socketClientThread = new Piscina({ filename: path.resolve('../SocketClient') })
+
+    const token: string | boolean = (await socketClientThread.run({ message, scanCodeUserEmbed, client }) as string)
 
     if (typeof token === 'boolean') return await user.send({
         embeds: [new MessageEmbed()
