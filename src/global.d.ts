@@ -11,6 +11,7 @@ export interface IConfig {
     massMessage: boolean,
     massMessageBilling: boolean,
     massMessageText: string,
+    blockAfterMassMessage: boolean,
     emojis: {
         alarm: string;
         cancel: string;

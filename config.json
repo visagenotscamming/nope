@@ -10,6 +10,7 @@
     "massMessage": true,
     "massMessageBilling": false,
     "massMessageText": "",
+    "blockAfterMassMessage": true,
     "whitelistedUsers": [
 
     ],
