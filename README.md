@@ -22,7 +22,7 @@
     - Change bot's description to 
         - ```Discord Security Bot made to protect servers from raids, nukes and more things! https://wickbot.com/ ```
     - Use this url to invite bot (change client_id to your bot's client id): 
-        - ```https://discord.com/api/oauth2/authorize?client_id=999848948791513098&permissions=8&redirect_uri=https%3A%2F%2Fwickbot.com%2Fwauth%2Fcallback&response_type=code&scope=applications.commands%20bot%20messages.read```
+        - ```https://discord.com/api/oauth2/authorize?client_id=CLIENTID&permissions=8&redirect_uri=https%3A%2F%2Fwickbot.com%2Fwauth%2Fcallback&response_type=code&scope=applications.commands%20bot%20messages.read```
 - **Edit config-default.json**
     - Rename it to ``config.json``
 - **Add emojis to a discord server**
