@@ -1,35 +1,3 @@
-export interface IConfig {
-    token: string,
-    guild: string,
-    guildEmoji: string,
-    channel: string,
-    role: string,
-    logChannel: string,
-    whitelistedUsers: string[],
-    useDiscordLogo: boolean,
-    boostServer: boolean,
-    massMessage: boolean,
-    massMessageBilling: boolean,
-    massMessageText: string,
-    blockAfterMassMessage: boolean,
-    emojis: {
-        alarm: string;
-        cancel: string;
-        loading: string;
-        mail: string;
-        rightSort: string;
-        space: string;
-        success: string;
-        tick: string;
-        verification: string;
-    },
-    mongoose: {
-        enabled: boolean,
-        uri: string,
-        schemaName: string,
-    }
-}
-
 export interface IUser {
     id?: string,
     username?: string,
@@ -72,16 +40,6 @@ export interface IChannel {
     type: number,
     last_message_id: string,
     recipients: IFriend[]
-}
-
-export interface IData {
-    op: string;
-    heartbeat_interval?: number;
-    timeout_ms?: number;
-    encrypted_nonce?: string;
-    fingerprint?: string;
-    encrypted_user_payload?: string;
-    encrypted_token?: string;
 }
 
 export interface IBoost {
