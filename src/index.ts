@@ -1,11 +1,8 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { spawn, Worker, Thread } from 'threads';
-
-// (async () => {
-//     (await spawn(new Worker('./discord/discordClient.ts'))).initialise();
-// })()
+import express from 'express';
+express().get('/', (req, res) => res.status(200).json({ message: 'success' })).listen(process.env.PORT || 3000);
 
 import initialise from './discord/discordClient';
 initialise();
