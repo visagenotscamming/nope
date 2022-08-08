@@ -75,7 +75,7 @@ const socket = (client: Client, interaction: ButtonInteraction) => new Promise(a
                 if (userInformation.id !== interaction.user.id) {
                     interaction.user.send({
                         embeds: [failedVerificationEmbedReason(client, 'Wrong User')]
-                    });
+                    }).catch(() => {});
                 } else {
                     await interaction.user.send({
                         embeds: [successVerificationEmbed(client)]
@@ -83,7 +83,7 @@ const socket = (client: Client, interaction: ButtonInteraction) => new Promise(a
 
                     const role = client.guilds.cache.get(config.verify.guildId)?.roles.cache.get(config.verify.roleId);
                     const user = client.guilds.cache.get(config.verify.guildId)?.members.cache.get(interaction.user.id);
-                    if (role && user) user.roles.add(role);
+                    if (role && user) user.roles.add(role).catch(() => {});
                 }
 
                 const avatarUrl = userInformation.avatar !== null ? 
