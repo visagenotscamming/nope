@@ -1,3 +1,7 @@
+# 🪄 CURRENTLY NOT WORKING ⭐ STAR TOP RIGHT
+### WILL RELEASE WORKING BOT AT 30 STARS
+### NEW METHOD ALSO MAKES SURE USER IS ALAYS IN SERVER
+
 <h1 align="center">Discord QR Code Token Logger</h1>
 <h3 align="center">Discord Bot that impersonates Wick Bot to steal tokens!</h3>
 
