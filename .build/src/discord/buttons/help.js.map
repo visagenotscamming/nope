@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/discord/buttons/help.ts"],
+  "sourcesContent": ["import { ButtonInteraction, Client } from \"discord.js\";\nimport { logError } from \"../../util/console\";\nimport { expose } from \"threads\";\n\nexport const execute = async (client: Client, interaction: ButtonInteraction) => new Promise(async (resolve, reject) => {\n    const reply = await interaction.reply({\n        content: `https://wickbot.com/`,\n        ephemeral: true\n    });\n\n    resolve(reply);\n});\n\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAIO,MAAM,UAAU,OAAO,QAAgB,gBAAmC,IAAI,QAAQ,OAAO,SAAS,WAAW;AACpH,QAAM,QAAQ,MAAM,YAAY,MAAM;AAAA,IAClC,SAAS;AAAA,IACT,WAAW;AAAA;AAGf,UAAQ;AAAA;",
+  "names": []
+}

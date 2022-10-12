@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/types/emojis.d.ts"],
+  "sourcesContent": ["export interface IEmojis {\n    alarm: GuildEmoji;\n    cancel: GuildEmoji;\n    loading: GuildEmoji;\n    mail: GuildEmoji;\n    right: GuildEmoji;\n    space: GuildEmoji;\n    success: GuildEmoji;\n    tick: GuildEmoji;\n    verification: GuildEmoji;\n}"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

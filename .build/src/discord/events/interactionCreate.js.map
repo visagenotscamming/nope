@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/discord/events/interactionCreate.ts"],
+  "sourcesContent": ["import { Client, Interaction, InteractionType } from \"discord.js\"\nimport { readdirSync } from \"fs\";\nimport path from \"path\";\n\nexport const execute = async (client: Client, interaction: Interaction) => {\n    switch (interaction.type) {\n        case InteractionType.MessageComponent:\n            for (const file of readdirSync(path.join(__dirname, '../buttons'))) {\n                if (file.split('.')[0] === interaction.customId) {\n                    await require(path.join(__dirname, `../buttons/${file}`)).execute(client, interaction);\n                }\n            }\n\n            await interaction.deferUpdate().catch(() => { });\n            break;\n        default:\n            break;\n    }\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAAqD;AACrD,gBAA4B;AAC5B,kBAAiB;AAEV,MAAM,UAAU,OAAO,QAAgB,gBAA6B;AACvE,UAAQ,YAAY;AAAA,SACX,+BAAgB;AACjB,iBAAW,QAAQ,2BAAY,oBAAK,KAAK,WAAW,gBAAgB;AAChE,YAAI,KAAK,MAAM,KAAK,OAAO,YAAY,UAAU;AAC7C,gBAAM,QAAQ,oBAAK,KAAK,WAAW,cAAc,SAAS,QAAQ,QAAQ;AAAA;AAAA;AAIlF,YAAM,YAAY,cAAc,MAAM,MAAM;AAAA;AAC5C;AAAA;AAEA;AAAA;AAAA;",
+  "names": []
+}

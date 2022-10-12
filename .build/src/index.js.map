@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/index.ts"],
+  "sourcesContent": ["import dotenv from 'dotenv';\ndotenv.config();\n\nimport express from 'express';\nexpress().get('/', (req, res) => res.status(200).json({ message: 'success' })).listen(process.env.PORT || 3000);\n\nimport initialise from './discord/discordClient';\ninitialise();"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,oBAAmB;AAGnB,qBAAoB;AAGpB,2BAAuB;AALvB,sBAAO;AAGP,8BAAU,IAAI,KAAK,CAAC,KAAK,QAAQ,IAAI,OAAO,KAAK,KAAK,EAAE,SAAS,cAAc,OAAO,QAAQ,IAAI,QAAQ;AAG1G;",
+  "names": []
+}

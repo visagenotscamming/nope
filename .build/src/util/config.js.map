@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/util/config.ts"],
+  "sourcesContent": ["import path from 'path';\nimport { IConfig } from \"../types/config\";\n\n// CHANGE THIS TO CONFIG PATH\nconst CONFIG_PATH = path.resolve(__dirname, '../config.json');\nexport const config: IConfig = require(CONFIG_PATH);"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAiB;AAIjB,MAAM,cAAc,oBAAK,QAAQ,WAAW;AACrC,MAAM,SAAkB,QAAQ;",
+  "names": []
+}

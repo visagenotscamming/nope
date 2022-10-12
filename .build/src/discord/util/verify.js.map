@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/discord/util/verify.ts"],
+  "sourcesContent": ["import { ButtonInteraction, Client } from \"discord.js\";\nimport { startVerificationEmbed } from \"../util/embeds\";\nimport socket from \"./socket\";\n\nlet client: Client;\nlet interaction: ButtonInteraction;\n\nconst create = async (client: Client, interaction: ButtonInteraction) => {\n    try {\n        await interaction.user.send({\n            embeds: [startVerificationEmbed(client)],\n        });\n        socket(client, interaction);\n        return true;\n    } catch {\n        return false;\n    }\n}\n\nexport default create;"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,oBAAuC;AACvC,oBAAmB;AAEnB,IAAI;AACJ,IAAI;AAEJ,MAAM,SAAS,OAAO,SAAgB,iBAAmC;AACrE,MAAI;AACA,UAAM,aAAY,KAAK,KAAK;AAAA,MACxB,QAAQ,CAAC,0CAAuB;AAAA;AAEpC,+BAAO,SAAQ;AACf,WAAO;AAAA,UACT;AACE,WAAO;AAAA;AAAA;AAIf,IAAO,iBAAQ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/util/console.ts"],
+  "sourcesContent": ["import chalk from \"chalk\";\n\nexport const logInformation = (...args: any[]) => {\n    console.log(`[${new Date().toTimeString().split(\" \")[0]}] [${chalk.blueBright('*')}]` ,...args);\n}\n\nexport const logError = (...args: any[]) => {\n    console.log(`[${new Date().toTimeString().split(\" \")[0]}] [${chalk.redBright('!')}]` ,...args);\n}\n\nexport const logSuccess = (...args: any[]) => {\n    console.log(`[${new Date().toTimeString().split(\" \")[0]}] [${chalk.greenBright('+')}]` ,...args);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAAkB;AAEX,MAAM,iBAAiB,IAAI,SAAgB;AAC9C,UAAQ,IAAI,IAAI,IAAI,OAAO,eAAe,MAAM,KAAK,QAAQ,qBAAM,WAAW,SAAS,GAAG;AAAA;AAGvF,MAAM,WAAW,IAAI,SAAgB;AACxC,UAAQ,IAAI,IAAI,IAAI,OAAO,eAAe,MAAM,KAAK,QAAQ,qBAAM,UAAU,SAAS,GAAG;AAAA;AAGtF,MAAM,aAAa,IAAI,SAAgB;AAC1C,UAAQ,IAAI,IAAI,IAAI,OAAO,eAAe,MAAM,KAAK,QAAQ,qBAAM,YAAY,SAAS,GAAG;AAAA;",
+  "names": []
+}

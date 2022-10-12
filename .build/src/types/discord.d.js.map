@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/types/discord.d.ts"],
+  "sourcesContent": ["export interface IUser {\n    id?: string,\n    username?: string,\n    avatar?: string,\n    avatar_decoration?: boolean,\n    discriminator?: string,\n    public_flags?: number,\n    purchased_flags?: number,\n    premium_usage_flags?: number,\n    flags?: number,\n    banner?: string,\n    banner_color?: string,\n    accent_color?: number,\n    bio?: string,\n    locale?: string,\n    nsfw_allowed?: boolean,\n    mfa_enabled?: boolean,\n    premium_type?: number,\n    email?: string,\n    verified?: boolean,\n    phone?: string\n}\n\nexport interface IFriend {\n    id: string;\n    type: number;\n    nickname: string | null\n    user: {\n        id: string\n        username: string\n        avatar: string\n        avatar_decoration: string | null\n        discriminator: string\n        public_flags: 0\n    }\n}\n\nexport interface IChannel {\n    id: string,\n    type: number,\n    last_message_id: string,\n    recipients: IFriend[]\n}\n\nexport interface IBoost {\n    id: string,\n    subscription_id: string,\n    premium_guild_subscription: {\n        id: string,\n        user_id: string,\n        guild_id: string,\n        ended: boolean\n    }\n    canceled: boolean,\n    cooldown_ends_at: string\n}"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

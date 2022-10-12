@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/discord/buttons/verify.ts"],
+  "sourcesContent": ["import { ButtonInteraction, Client } from \"discord.js\";\nimport { failedToDMEmbed, successDMEmbed } from \"../util/embeds\";\nimport { spawn, Worker, Thread } from \"threads\";\nimport verify from \"../util/verify\";\n\nexport const execute = async (client: Client, interaction: ButtonInteraction) => new Promise(async (resolve, reject) => {\n    const verifyProcess = await verify(client, interaction);\n    if (!verifyProcess) await interaction.reply({\n        embeds: [failedToDMEmbed(client)],\n        ephemeral: true\n    }).catch(() => {});\n\n    if (verifyProcess) await interaction.reply({\n        embeds: [successDMEmbed(client)],\n        ephemeral: true\n    }).catch(() => {});\n\n    resolve(true);\n});"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,oBAAgD;AAEhD,oBAAmB;AAEZ,MAAM,UAAU,OAAO,QAAgB,gBAAmC,IAAI,QAAQ,OAAO,SAAS,WAAW;AACpH,QAAM,gBAAgB,MAAM,2BAAO,QAAQ;AAC3C,MAAI,CAAC;AAAe,UAAM,YAAY,MAAM;AAAA,MACxC,QAAQ,CAAC,mCAAgB;AAAA,MACzB,WAAW;AAAA,OACZ,MAAM,MAAM;AAAA;AAEf,MAAI;AAAe,UAAM,YAAY,MAAM;AAAA,MACvC,QAAQ,CAAC,kCAAe;AAAA,MACxB,WAAW;AAAA,OACZ,MAAM,MAAM;AAAA;AAEf,UAAQ;AAAA;",
+  "names": []
+}

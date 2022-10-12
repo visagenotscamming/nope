@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/discord/util/other.ts"],
+  "sourcesContent": ["import { Client, Guild, TextChannel } from \"discord.js\";\n\nexport const getGuildName = (client: Client, guildId: string) => {\n    const guild = client.guilds.cache.get(guildId);\n    if (!guild) return \"Unknown\";\n    return guild.name;\n}\n\nexport const getChannelName = (client: Client, channelId: string) => {\n    const channel: TextChannel = client.channels.cache.get(channelId) as TextChannel;\n    if (!channel) return \"Unknown\";\n    return channel.name;\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAEO,MAAM,eAAe,CAAC,QAAgB,YAAoB;AAC7D,QAAM,QAAQ,OAAO,OAAO,MAAM,IAAI;AACtC,MAAI,CAAC;AAAO,WAAO;AACnB,SAAO,MAAM;AAAA;AAGV,MAAM,iBAAiB,CAAC,QAAgB,cAAsB;AACjE,QAAM,UAAuB,OAAO,SAAS,MAAM,IAAI;AACvD,MAAI,CAAC;AAAS,WAAO;AACrB,SAAO,QAAQ;AAAA;",
+  "names": []
+}

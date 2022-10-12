@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/types/index.d.ts"],
+  "sourcesContent": ["export interface IData {\n    op: string;\n    heartbeat_interval?: number;\n    timeout_ms?: number;\n    encrypted_nonce?: string;\n    fingerprint?: string;\n    encrypted_user_payload?: string;\n    encrypted_token?: string;\n}"],
+  "mappings": ";;AAAA;",
+  "names": []
+}
